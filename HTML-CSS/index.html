@@ -8,37 +8,60 @@
     </head>
     <body>
         <header>
+            <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 width="10" height="10" 
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" 
+                 class="icon icon-tabler icons-tabler-outline icon-tabler-brackets-angle">
+                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                 <path d="M8 4l-5 8l5 8" />
+                 <path d="M16 4l5 8l-5 8" />
+            </svg>
             <h1>DevJobs</h1>
+            </a>
             <nav>
-                <a href="">Inicio</a>
+                <a href="">Buscar</a>
                 <a href="">Empleos</a>
+                <a href="">Empresas</a>
+                <a href="">Salarios</a>
             </nav>
             <div>
-                <a href="">Publicaar un empleo</a>
-                <a href="">Iniciar sesión</a>
+                <a class="btn-public" href="">Publicar un empleo</a>
+                <a class="btn-ingresar" href="">Iniciar sesión</a>
             </div>
         </header>
         <main>
             <section>
-                <img src="./background.webp" width="200"/>
+                <img src="./background.webp" width="200" height="150"/>
 
                 <h1>Encuentra el trabajo de tus sueños</h1>
 
                 <p>Únete a la comunidad más grandre de desarrolladores y encuentra tu próxima oportunidad.</p>
 
                 <form role="search">
-                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                    <div>
+                        <span>
+                            <svg  xmlns="http://www.w3.org/2000/svg"  
+                            width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  
+                            stroke="currentColor"  stroke-width="1.5"  stroke-linecap="round"  stroke-linejoin="round" 
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                        </span>
                     
-                    <input type="text" placeholder="Buscar ofertas por titulo, habilidad o empresa">
+                        <input type="text" placeholder="Buscar ofertas por título, habilidad o empresa">
                     
-                    <button type="submit">Buscar</button>
+                        <button type="submit">Buscar</button>
+
+                    </div>
+                    
                 </form>
             </section>
 
             <section>
                 <header>
-                    <h2>¿Por qué DevJobs</h2>
-                    <p>DevJobs es la principal plataforma de búsqueda de empleo para desarrolladores. Conectamos a los mejores talentos con las empresas más innovadoras.</p>
+                    <h2>¿Por qué DevJobs?</h2>
+                    <p>DevJobs es la principal bolsa de trabajo para desarrolladores. Conectamos a los desarrolladores con las mejores empresas del mundo.</p>
                 </header>
                 <footer>
                     <article>
@@ -50,7 +73,7 @@
                     <article>
                         <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-users"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M21 21v-2a4 4 0 0 0 -3 -3.85" /></svg>
                         <h3>Conecta con las mejores empresas</h3>
-                        <p>Accede a ofertas exclusivas de empresas líderes en tecnologoía.</p>
+                        <p>Conecta con empresas que están contartando por tus habilidades.</p>
                     </article>
 
                     <article>

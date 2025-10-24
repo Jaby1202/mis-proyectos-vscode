@@ -1,316 +1,390 @@
+/*
+  ==============================================================================
+  ==============================================================================
+  Este programa fue creado y estudiado gracias el bootcamp gratiutuo ofertado en Midudev
+  ================================================================================
+ */
+/*RESETEO Y CONFIGURACIÓN BASE*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
+/*
+ * ============================================
+ * SISTEMA DE DISEÑO - DEVJOBS
+ * ============================================
+ * 
+ * Paleta de colores y variables CSS para mantener
+ * consistencia visual en toda la aplicación.
+ * 
+ */
 :root {
+  /* PALETA PRIMARIA
+     Usada para elementos principales de navegación,
+     botones primarios y elementos interactivos */
   --primary: #3b4550;
   --primary-dark: #0a3d66;
   --primary-hover: #0d5ba8;
   --primary-light: #09f;
-  --background: #06182a;
-  --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.1);
-  --card-bg: #1e293b;
-  --shadow: rgba(0, 0, 0, 0.3);
-  --input-bg: #1e293b;
-  --hsla-example: hsla(210, 100%, 56%, 1);
+  /* FONDOS
+     Sistema de capas para crear jerarquía visual */
+  --background: #06182a; /* Capa 0: Fondo base */
+  --card-bg: #1e293b;    /* Capa 1: Contenedores elevados */
+  --input-bg: #1e293b;  /* Capa 2: Campos de formulario */
+
+  /* TIPOGRAFÍA
+     Escala de colores para texto basada en importancia */
+  --text-primary: #ffffff;  /* Títulos y contenido principal */
+  --text-secondary: #cbd5e1; /* Subtítulos y texto secundario */
+  --text-muted: #94a3b8;  /* Texto menos importante */
+  /* DECORATIVOS
+     Elementos para agregar profundidad y separación */
+  --border: rgba(255, 255, 255, 0.1); /* Bordes y divisores */
+  --shadow: rgba(0, 0, 0, 0.3); /* Sombras para elevación */
+  --hsla-example: hsla(210, 100%, 56%, 1); /* Ejemplo de color HSLA */
 }
-
-
-
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ 
+*/
+/*
+ * Fuente: Inter Variable
+ * Peso: 100-900
+ * Estilo: Normal
+ * Display: Swap (mejora rendimiento de carga)
+ * 
+ * La fuente se carga desde Google Fonts CDN
+ * con soporte para caracteres latinos y latinos extendidos
+ */
 @font-face {
-  font-family: 'Inter Variable';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 100 900;
+  font-family: 'Inter Variable';  /* Nombre de la fuente */
+  font-style: normal; /* Estilo normal */
+  font-display: swap; /* Muestra texto de respaldo mientras carga */
+  font-weight: 100 900; /* Rango variable de pesos */
   src: url(https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.woff2) format('woff2-variations');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
-
-
-
-
-
-
-
-
-
-
+/* Estilos base para el cuerpo del documento */
 body {
-  font-family: system-ui;
-  background-color: var(--background);
-  color: var(--text-primary);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
+  font-family: system-ui; /* Fuente de sistema para mejor rendimiento */
+  background-color: var(--background); /* Fondo principal */
+  color: var(--text-primary);/* Color de texto principal */
+  min-height: 100vh;/* Altura mínima para cubrir toda la pantalla */
+  display: flex;/* Usar flexbox para centrar contenido */
+  flex-direction: column;/* Dirección de columna */
+  line-height: 1.6;/* Espaciado entre líneas para legibilidad */
 }
-
-
-
-
 
 /* Títulos principales */
 h1 {
-  font-size: 2.25rem;
-  font-weight: 900;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  text-wrap: balance;
+  font-size: 2.25rem; /* Tamaño de fuente grande para destacar */
+  font-weight: 900; /* Peso máximo para énfasis */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+  line-height: 1.6; /* Altura de línea ajustada para títulos */
+  text-wrap: balance; /* Ajuste de texto equilibrado */
 }
-
+/* Párrafos el h1 toma cada p heredado*/
 h1 + p {
-  text-wrap: balance;
-  margin-bottom: 2rem
+  text-wrap: balance;/* Ajuste de texto equilibrado, evita lineas huerfanas */
+  margin-bottom: 3rem /* Espacio debajo del párrafo */
+}
+main > section:nth-child(1) p {
+  font-size: 1.125rem; /* Tamaño de fuente mediano */
+  color: var(--text-secondary); /* Color de texto secundario */
+  max-width: 48rem; /* Ancho máximo para legibilidad */
+  margin: 0 auto 3rem; /* Centrar y espacio inferior */
+  line-height: 1.6; /* Espaciado entre líneas */
 }
 
 /* Header */
 header {
-  border-bottom: 1px solid var(--border);
-  background: var(--background);
-  padding: .5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  border-bottom: 1px solid var(--border); /* Línea divisoria inferior */
+  background: var(--background); /* Fondo del header */
+  padding: .5rem 1rem;   /* Espaciado interno */
+  display: flex; /* Usar flexbox para layout */
+  align-items: center; /* Alinear verticalmente */
+  justify-content: space-between;   
+  gap: 2rem;   /* Espacio entre elementos */
+
+  > a {
+    display: flex; /* Usar flexbox para layout */
+    align-items: center; /* Alinear verticalmente */
+    gap: 0.5rem; /* Espacio entre ícono y texto */
+    text-decoration: none; /* Sin subrayado */
+    svg {
+      display: block; /* Mostrar como bloque */
+      stroke-width: 1.5; /* Grosor del trazo */
+      stroke: var(--primary-light); /* Color del trazo */
+      width: 25px; /* Ancho del ícono */
+      height: 25px; /* Altura del ícono */
+      margin-right: 0.1rem;     /* Espacio a la derecha del ícono */
+      flex-shrink: 0;   /* No reducir tamaño */
+      transition: stroke 0.2s; /* Transición suave */
+    } 
+    h1{
+      font-size: 1.8rem; /* Tamaño de fuente mediano */
+      font-weight: 650; /* Peso máximo */
+      color: var(--text-primary);   /* Color de texto principal */
+      margin: 0; /* Sin margen */
+    }
+    &:hover svg, &:focus svg {
+      stroke: var(--primary); /* Color del trazo al interactuar */
+      outline: none;  /* Sin contorno al enfocar */
+    }
+  }
 
   h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    font-size: 1.25rem; /* Tamaño de fuente mediano */
+    font-weight: 700; /* Peso semi-negrita */
+    color: var(--text-primary);   /* Color de texto principal */
   }
 }
 
 /* Navegación del header a otras páginas */
 nav {
-  align-items: center;
-  gap: 1rem;
-  display: flex;
+  align-items: center; /* Alinear elementos verticalmente */
+  gap: 1rem;  /* Espacio entre enlaces */
+  display: flex; /* Usar flexbox para layout */
 
   a {
-    text-decoration: none;
-    color: var(--text-secondary);
-    transition: color 0.2s;
-    font-weight: 500;
+    text-decoration: none; /* Sin subrayado */
+    color: var(--text-secondary);   /* Color de texto secundario */
+    transition: color 0.2s; /* Transición suave para color */
+    font-weight: 500;   /* Peso medio */
 
     &:hover, &:focus {
-      color: var(--primary);
-      outline: none;
+      color: var(--primary); /* Color primario al interactuar */
+      outline: none;  /* Sin contorno al enfocar */
     }
   }
 }
 
 /* Botones del Header */
 header div a {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  background-color: #334155;
-  color: var(--text-primary);
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-decoration: none;
-  /* TODO */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  border-radius: 0.5rem;  /* Bordes redondeados */
+  background-color: #334155;  /* Fondo del botón */
+  color: var(--text-primary);   /* Color de texto principal */
+  display: inline-block;  /* Mostrar como bloque en línea */
+  font-size: 0.875rem; /* Tamaño de fuente pequeño */
+  font-weight: 700;   /* Peso negrita */
+  text-decoration: none;  /* Sin subrayado */  
 }
-
+header div a.btn-public {
+  background-color: var(--primary-dark); /* Fondo del botón primario */
+  color : var(--primary-light); /* Color del texto */
+  &:hover, &:focus {
+    background-color: var(--primary-hover); /* Fondo al interactuar */
+    outline: 2px solid white; /* Contorno blanco */
+    outline-offset: 2px; /* Separación del contorno */
+  }
+}
+header div a.btn-ingresar {
+  background-color: var(--primary); /* Fondo */
+  &:hover, &:focus {
+    background-color: var(--primary-dark); /* Fondo al interactuar */
+    outline: 2px solid white; /* Contorno blanco */
+    outline-offset: 2px; /* Separación del contorno */
+  }
+}
 /* Hero */
 main > section:nth-child(1) {
-  height: 500px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-height: 65vh; /* Altura mínima del hero */
+  text-align: center; /* Centrar texto */
+  position: relative; /* Posición relativa para elementos absolutos */
+  display: flex;  /* Usar flexbox para centrar contenido */
+  flex-direction: column; /* Dirección de columna */
+  justify-content: center; /* Centrar verticalmente */  
+  align-items: center;  /* Centrar horizontalmente */
+  padding: 4rem 2rem; /* Espaciado interno */
 
   h1 {
-    padding-top: 36px;
+    padding-top: 0; /* Espacio superior */
+    font-size: 3rem; /* Tamaño de fuente grande */
+    font-weight: 800; /* Peso extra-negrita */
+    line-height: 1.1; /* Altura de línea ajustada */
+    margin-bottom: 1.5rem; /* Espacio debajo del título */
   }
 
   & > img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    mask-image: linear-gradient(to bottom, rgba(16, 25, 34, 1) 5%, rgba(16, 25, 34, 0) 80%);
+    position: absolute; /* Posición absoluta para fondo */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    object-fit: cover; /* Cubrir área sin distorsión */
+    z-index: -1;  /* Detrás del contenido */
+    left: 0;  /* Alineado a la izquierda */    
+    right: 0; /* Alineado a la derecha */
+    opacity: 0.4; /* Opacidad para efecto de fondo */
+    mask-image: linear-gradient(to bottom, rgba(16, 25, 34, 1) 5%, rgba(16, 25, 34, 0) 80%); 
+    /* Degradado de máscara para efecto */
   }
 }
 
 /* Formulario de Búsqueda */
 form {
-  max-width: 42rem;
-  width: 100%;
-  margin: 0 auto;
-  padding-inline: 1rem;
+  max-width: 50rem; /* Ancho máximo del formulario */
+  width: 100%; /* Ancho completo */
+  margin: 0 auto;   /* Centrar horizontalmente */
+  padding-inline: 1rem; /* Espaciado horizontal */
+  border: #1e293b; /* Borde del formulario */
+  
 }
 
 form > div {
-  display: flex;
-  align-items: center;
-  background-color: var(--input-bg);
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px var(--shadow);
-  padding: 0.5rem;
-  gap: 0.5rem;
+  display: flex; /* Usar flexbox para layout */
+  align-items: center; /* Alinear verticalmente */
+  background-color: var(--input-bg); /* Fondo del campo de entrada */
+  backdrop-filter: blur(12px); /* Efecto de desenfoque */
+  border: 1px solid var(--border); /* Borde del formulario */
+  border-radius: 0.75rem; /* Bordes redondeados */
+  box-shadow: 0 20px 25px -5px var(--shadow); /* Sombra para profundidad */
+  padding: 0.5rem; /* Espaciado interno */
+  gap: 0.5rem; /* Espacio entre elementos */
 }
 
 form span {
-  padding-left: 0.75rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
+  padding-left: 1rem; /* Espacio izquierdo */
+  color: var(--text-muted); /* Color de texto atenuado */
+  display: flex; /* Usar flexbox */
+  align-items: center; /* Alinear verticalmente */
+  flex-shrink: 0; /* No reducir tamaño */
 }
 
 form input[type="text"] {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: var(--text-primary);
-  padding: 0.75rem 0.5rem;
-  font-size: 1rem;
-  font-family: inherit;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  background: transparent; /* Fondo transparente */
+  border: 0 !important; /* Sin borde */
+  border-radius: none; /* Sin borde */
+  outline: none; /* Sin contorno */
+  color: var(--text-secondary); /* Color de texto principal */
+  padding: 1rem 0.75rem; /* Espaciado interno */
+  font-size: 0.95rem; /* Tamaño de fuente */
+  font-family: inherit; /* Hereda la fuente del padre */
 }
 
 form input[type="text"]::placeholder {
-  color: #64748b;
+  color: #64748b; /* Color del texto del placeholder */
 }
 
 form button[type="submit"] {
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  background-color: var(--primary);
-  color: white;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  font-family: inherit;
-  font-size: 1rem;
-  white-space: nowrap;
+  padding: 1rem 2rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  background-color: var(--primary-light); /* Fondo del botón */
+  color: white; /* Color del texto */
+  font-weight: 600; /* Peso negrita */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.2s; /* Transición suave para fondo */
+  font-family: inherit; /* Hereda la fuente del padre */
+  font-size: 1rem; /* Tamaño de fuente */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-form button[type="submit"]:hover,
+form button[type="submit"]:hover,   
 form button[type="submit"]:focus {
-  background-color: var(--primary-hover);
-  outline: 2px solid white;
-  outline-offset: 2px;
+  background-color: var(--primary-hover); /* Fondo al interactuar */
+  outline: none; /* Contorno blanco */
+  transform: translateY(-1px); /* Efecto de elevación */
 }
 
 /* Features Section */
 main > section:nth-child(2) {
-  padding-inline: 1rem;
-  background-color: var(--background);
-  padding-top: 2rem;
+  padding: 6rem 1rem 4rem; /* Espaciado interno */
+  background-color: var(--background); /* Fondo de la sección */
 
   & > header {
-    gap: 2px;
-    flex-direction: column;
-
+    gap: 0.5rem; /* Espacio entre elementos */
+    flex-direction: column; /* Dirección de columna */
+    margin-bottom: 3rem; /* Espacio debajo del header */
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 0.5rem; /* Espacio debajo del título */
+      font-size: 2.5rem; /* Tamaño de fuente grande */
     }
 
     p {
-      opacity: .75;
+      opacity: .75; /* Opacidad del texto */
+      font-size: 1.1rem; /* Tamaño de fuente mediano */
     }
   }
 
   & > div {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 1280px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
   }
 }
 
 main > section:nth-child(2) h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
+  font-size: 1.875rem; /* Tamaño de fuente grande */
+  font-weight: 700; /* Peso semi-negrita */
+  color: var(--text-primary); /* Color de texto principal */
+  margin-bottom: 1rem; /* Espacio debajo del título */
 }
 
 main > section:nth-child(2) > div > div:first-child > p {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  max-width: 42rem;
-  margin: 0 auto;
+  font-size: 1.125rem; /* Tamaño de fuente mediano */
+  color: var(--text-muted); /* Color de texto atenuado */
+  max-width: 42rem; /* Ancho máximo del párrafo */
+  margin: 0 auto; /* Centrar horizontalmente */
 }
 
 /* Grid de Features */
 main > section:nth-child(2) footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px
+  display: grid; /* Usar grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+  gap: 1.5rem ; /* Espacio entre elementos */
 }
 
 /* Feature Cards */
-/* article {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  margin-bottom: 16px;
-  border-radius: 0.5rem;                   
-  box-shadow: 0px 1px 3px 0 var(--shadow); 
+ article {
+  background-color: var(--card-bg); /* Fondo de la tarjeta */
+  border: 1px solid var(--border); /* Borde de la tarjeta */
+  padding: 2.5rem 2rem;        /* Espaciado interno */
+  margin-bottom: 0;               /* Sin margen inferior */
+  border-radius: 0.75rem;              /* Bordes redondeados */                  
+  box-shadow: 0px 1px 3px 0 var(--shadow);  /* Sombra para profundidad */
+  transition: all 0.3s ease; /* Transición suave */
 
+  &:hover {
+    background-color: rgba(15, 23, 42, 0.8); /* Fondo al interactuar */
+    transform: translateY(-4px);           /* Efecto de elevación */
+    border-color: rgba(255, 255, 255, 0.1); /* Color del borde al interactuar */
+  }
   svg {
-    color: var(--primary-light);          
-    background: rgba(0, 153, 255, 0.3);  
-    border-radius: 9999px;               
-    width: 64px;                         
-    height: 64px;                        
-    padding: 16px;                       
+    color: var(--primary-light);         /* Color del ícono */          
+    background: rgba(0, 153, 255, 0.12);  /* Fondo del ícono */
+    border-radius: 9999px;          /* Bordes completamente redondeados */           
+    width: 72px;                      /* Ancho del ícono */                      
+    height: 72px;                    /* Altura del ícono */                     
+    padding: 16px;                 /* Espaciado interno */ 
+    margin-bottom: 1.5rem;          /* Espacio debajo del ícono */      
   }
 
   h3 {
-    font-weight: 500;
+    font-weight: 600;                 /* Peso medio */
+    font-size: 1.5rem;               /* Tamaño de fuente grande */
+    margin-bottom: 0.75rem;          /* Espacio debajo del título */
   }
 
   p {
-    color: var(--text-muted);
+    color: var(--text-muted);            /* Color de texto atenuado */
+    font-size: 1rem;                 /* Tamaño de fuente */
+    line-height: 1.6;               /* Espaciado entre líneas */
   }
-} */
+} 
 
 /* Footer */
 footer {
-  background-color: var(--background);
-  border-top: 1px solid var(--border);
-  text-align: center;
-  padding: 16px;
+  background-color: var(--background); /* Fondo del footer */
+  border-top: 1px solid var(--border); /* Línea divisoria superior */
+  text-align: center; /* Centrar texto */
+  padding: 2rem 1rem; /* Espaciado interno */
 
   small {
-    color: var(--text-muted);
-    font-size: 0.875rem;
+    color: var(--text-muted);           /* Color de texto atenuado */
+    font-size: 0.875rem;               /* Tamaño de fuente pequeño */
   }
 }
 
-article {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  margin-bottom: 16px;
-  border-radius: 0.5rem;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5);
 
-  svg {
-    color: var(--primary-light);
-    background: rgba(0, 153, 255, .3);
-    width: 64px;
-    height: 64px;
-    border-radius: 100%;
-    padding: 16px;
-  }
 
-  p {
-    color: var(--text-muted);
-  }
-
-  h3 {
-    font-weight: 500;
-  }
-}
