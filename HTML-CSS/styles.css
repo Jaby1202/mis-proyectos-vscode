@@ -267,7 +267,7 @@ form input[type="text"]::placeholder {
   color: #64748b; /* Color del texto del placeholder */
 }
 
-form button[type="submit"] {
+button {
   padding: 1rem 2rem; /* Espaciado interno */
   border-radius: 0.5rem; /* Bordes redondeados */
   background-color: var(--primary-light); /* Fondo del botón */
@@ -279,14 +279,15 @@ form button[type="submit"] {
   font-family: inherit; /* Hereda la fuente del padre */
   font-size: 1rem; /* Tamaño de fuente */
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  &:hover,   
+  &:focus {
+    background-color: var(--primary-hover); /* Fondo al interactuar */
+    outline: none; /* Contorno blanco */
+    transform: translateY(-1px); /* Efecto de elevación */
+  }
 }
 
-form button[type="submit"]:hover,   
-form button[type="submit"]:focus {
-  background-color: var(--primary-hover); /* Fondo al interactuar */
-  outline: none; /* Contorno blanco */
-  transform: translateY(-1px); /* Efecto de elevación */
-}
+
 
 /* Features Section */
 main > section:nth-child(2) {
@@ -372,6 +373,52 @@ main > section:nth-child(2) footer {
     line-height: 1.6;               /* Espaciado entre líneas */
   }
 } 
+
+.jobs-search{
+  margin: 0;
+  padding: 0;
+  height: auto !important; 
+
+  h2{
+    font-size: 2.5rem; /* Tamaño de fuente grande para destacar */
+    margin-bottom:.25rem; /* Espacio debajo del título */
+  }
+
+  p{
+    font-size: 1rem !important; /* Tamaño de fuente mediano */
+    color: var(--text-muted); /* Color de texto atenuado */
+    margin-top: 1.5rem; /* Espacio debajo del párrafo */
+  }
+  .search-bar{
+    background-color: var(--input-bg); /* Fondo del campo de entrada */
+    padding: 0.25rem 0.5rem; /* Espaciado interno */
+  }
+  .search-filters{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  form{
+    width: 100%;
+    max-width: 1280px; 
+    margin: 0;
+    
+  }
+
+  form > div{
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      border: none;
+    }
+  
+}
+
+
+
+
 
 /* Footer */
 footer {
