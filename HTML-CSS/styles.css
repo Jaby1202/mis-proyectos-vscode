@@ -291,7 +291,7 @@ button {
 
 /* Features Section */
 main > section:nth-child(2) {
-  padding: 6rem 1rem 4rem; /* Espaciado interno */
+  padding: 3rem 1rem 2rem; /* Espaciado interno */
   background-color: var(--background); /* Fondo de la sección */
 
   & > header {
@@ -337,7 +337,7 @@ main > section:nth-child(2) footer {
 }
 
 /* Feature Cards */
- article {
+article {
   background-color: var(--card-bg); /* Fondo de la tarjeta */
   border: 1px solid var(--border); /* Borde de la tarjeta */
   padding: 2.5rem 2rem;        /* Espaciado interno */
@@ -376,7 +376,7 @@ main > section:nth-child(2) footer {
 
 .jobs-search{
   margin: 0;
-  padding: 0;
+  padding: 3rem 0 2rem;
   height: auto !important; 
 
   h2{
@@ -413,6 +413,89 @@ main > section:nth-child(2) footer {
       padding: 0;
       border: none;
     }
+  
+}
+.jobs-listings{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1rem;
+  padding: 1 rem;
+
+  
+  article{
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(233, 225, 225, 0.3);
+    margin: 0;
+
+    display: flex;
+    align-items: start;
+    gap: 1rem ;
+
+    small {
+      font-size: .875rem; /* Tamaño de fuente pequeño */
+      opacity: .75; /* Opacidad del texto */
+    }
+    p{
+      margin-top: 0.5rem; /* Espacio debajo del párrafo */
+      line-height: 1.6;               /* Espaciado entre líneas */
+    }
+    &:last-child{
+      border-bottom: none;
+      
+    }
+  }
+}
+
+main > section:nth-child(2) {
+  padding: 0 1rem 3rem;
+  
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 2rem;
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-decoration: none;
+    color: var(--text-muted);
+    border-radius: 0.375rem;
+    transition: all 0.3s;
+
+    &:hover, &:focus{
+      background-color: white;
+    }
+    &:active{
+      transform: scale(0.90);
+    }
+    &.is-active{
+      background-color: var(--primary-light);
+      color: white;
+      pointer-events: none;
+    }
+  }
+}
+
+.button-apply-job{
+  background:#09f;
+
+  &.is-applied{
+    background-color: #4caf50;
+    pointer-events: none;
+    opacity: .5;
+  }
   
 }
 
