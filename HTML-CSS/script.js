@@ -10,3 +10,20 @@ jobsListingsSection.addEventListener('click', (event) => {
         element.disabled = true
     }
 })
+
+const filter = document.querySelector('#filtro-ubicacion')
+const jobs = document.querySelectorAll('.job-listing-card')
+
+filter.addEventListener('change', function () {
+    const selectedValue = filter.value
+
+    jobs.forEach(job=> {
+    const modalidad = job.dataset.modalidad 
+
+    if (selectedValue === '' || selectedValue === modalidad) {
+        job.style.display = 'flex'
+    } else {
+        job.style.display = 'none'
+    }
+    })
+})

@@ -499,9 +499,33 @@ main > section:nth-child(2) {
   
 }
 
+.search-filters{
+  select{
+    padding: 0.625rem 1.5rem; /* Espaciado interno */
+    background-color: var(--input-bg); /* Fondo del campo de entrada */
+    border: 0; /* Borde del formulario */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    color: var(--text-secondary); /* Color de texto principal */
+    font-size: 0.875rem; /* Tamaño de fuente */
+    font-family: inherit; /* Hereda la fuente del padre */
+    outline: none; /* Sin contorno */
+    cursor: pointer; /* Cursor de puntero */
+    transition: 0.2s;
+    appearance: none; /* Elimina estilos por defecto */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 2.5rem;
+    &:hover{
+      border-color: var(--primary-hover);
+    }
 
-
-
+    &:focus{
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.4);
+    }
+  }
+}
 
 /* Footer */
 footer {

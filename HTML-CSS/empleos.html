@@ -51,7 +51,7 @@
                         <input  required type="text" placeholder="Buscar trabajos, empresas o habilidades">
                     </div>
                     <div class="search-filters">
-                        <select name="tecnología" id="tecnologia">
+                        <select name="tecnología" id="filtro-tecnologia">
                             <option value="">Tecnología</option>
                             <option value="javascript">JavaScript</option>
                             <option value="python">Python</option>
@@ -62,21 +62,21 @@
                             <option value="go">Go</option>
                             <option value="typescript">TypeScript</option>
                         </select>
-                        <select name="ubicación" id="ubicacion">
+                        <select name="ubicacion" id="filtro-ubicacion">
                             <option value="">Ubicación</option>
                             <option value="remoto">Remoto</option>
                             <option value="onsite">On-site</option>
                             <option value="híbrido">Híbrido</option>
                             <option value="colombia">Colombia</option>
                         </select>
-                        <select name="tipo-de-contrato" id="tipo-de-contrato">
+                        <select name="tipo-de-contrato" id="filtro-tipo-de-contrato">
                             <option value="">Tipo de contrato</option>
                             <option value="full-time">Full-time</option>
                             <option value="part-time">Part-time</option>
                             <option value="freelance">Freelance</option>
                             <option value="internship">Internship</option>
                         </select>
-                        <select name="nivel-de-experiencia" id="nivel-de-experiencia">
+                        <select name="nivel-de-experiencia" id="filtro-nivel-de-experiencia">
                             <option value="">Nivel de experiencia</option>
                             <option value="junior">Junior</option>
                             <option value="mid-level">Mid-level</option>
@@ -91,7 +91,7 @@
             <section>
                 <h2>Resultados de búsqueda</h3>
                 <div class="jobs-listings">
-                    <article>
+                    <article data-modalidad="remoto" class="job-listing-card">
                         <div>
                             <h4>Ingeniero de Software</h4>
                             <small>Tech Solutions. | Remoto</small>
@@ -104,7 +104,7 @@
                             <button class="button-apply-job" id="boton-importante">Aplicar</button>
                     </article>
 
-                    <article>
+                    <article data-modalidad="colombia" class="job-listing-card">
                         <div>
                             <h4>Analista de Datos</h4>
                             <small>Data Driven Co. | Colombia</small>
@@ -116,7 +116,7 @@
                         <button  class="button-apply-job">Aplicar</button>
                     </article>
 
-                    <article>
+                    <article data-modalidad="colombia" class="job-listing-card">
                         <div>
                             <h4>Desarrollador de Aplicaciones Móviles</h4>
                             <small>Mobile Apps Ltd. | Colombia</small>
@@ -128,7 +128,7 @@
                         <button class="button-apply-job">Aplicar</button>
                     </article>
 
-                    <article>
+                    <article data-modalidad="remoto" class="job-listing-card">
                         <div>
                             <h4>Ingeniero de DevOps</h4>
                             <small>Cloud Services SA | Remoto</small>
