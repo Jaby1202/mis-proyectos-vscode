@@ -423,7 +423,7 @@ article {
   padding: 1 rem;
 
   
-  article{
+  .job-listing-card{
     border: none;
     background: none;
     box-shadow: none;
@@ -434,6 +434,10 @@ article {
     display: flex;
     align-items: start;
     gap: 1rem ;
+
+    &.is-hiden{
+      display: none;
+    }
 
     small {
       font-size: .875rem; /* Tamaño de fuente pequeño */

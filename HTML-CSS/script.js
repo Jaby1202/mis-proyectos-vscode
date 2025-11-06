@@ -18,12 +18,8 @@ filter.addEventListener('change', function () {
     const selectedValue = filter.value
 
     jobs.forEach(job=> {
-    const modalidad = job.dataset.modalidad 
-
-    if (selectedValue === '' || selectedValue === modalidad) {
-        job.style.display = 'flex'
-    } else {
-        job.style.display = 'none'
-    }
+    const modalidad = job.getAttribute('data-modalidad') 
+    const isShown = selectedValue === '' || selectedValue === modalidad
+    job.classList.toggle('is-hiden', !isShown)
     })
 })
