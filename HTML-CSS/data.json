@@ -6,9 +6,10 @@
     "ubicacion": "Remoto",
     "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
     "data": {
-      "technology": ["react", "node", "javascript"],
+      "technology": "react",
       "modalidad": "remoto",
-      "nivel": "senior"
+      "nivel": "senior",
+      "contrato": "full-time"
     }
   },
   {
@@ -20,7 +21,8 @@
     "data": {
       "technology": "python",
       "modalidad": "cdmx",
-      "nivel": "junior"
+      "nivel": "junior",
+      "contrato": "internship"
     }
   },
   {
@@ -32,7 +34,9 @@
     "data": {
       "technology": "mobile",
       "modalidad": "guadalajara",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "full-time"
+
     }
   },
   {
@@ -44,7 +48,8 @@
     "data": {
       "technology": "mobile",
       "modalidad": "remoto",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "part-time"
     }
   },
   {
@@ -56,7 +61,8 @@
     "data": {
       "technology": "mobile",
       "modalidad": "barcelona",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "freelance"
     }
   },
   {
@@ -68,7 +74,8 @@
     "data": {
       "technology": "mobile",
       "modalidad": "bsas",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "full-time"
     }
   },
   {
@@ -80,7 +87,8 @@
     "data": {
       "technology": "mobile",
       "modalidad": "remoto",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "internship"
     }
   },
   {
@@ -92,7 +100,8 @@
     "data": {
       "technology": "mobile",
       "modalidad": "madrid",
-      "nivel": "senior"
+      "nivel": "senior",
+      "contrato": "part-time"
     }
   },
   {
@@ -100,11 +109,13 @@
     "titulo": "Frontend Developer",
     "empresa": "Bright Web Studio",
     "ubicacion": "Valencia",
+    "tipo": "internship",
     "descripcion": "Buscamos un desarrollador frontend con experiencia en React, TypeScript y Tailwind CSS. Se valorará conocimiento en optimización de rendimiento y accesibilidad web.",
     "data": {
       "technology": "react",
       "modalidad": "valencia",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato": "internship"
     }
   },
   {
@@ -112,11 +123,13 @@
     "titulo": "Backend Developer",
     "empresa": "APIWorks",
     "ubicacion": "Bogotá",
+    "tipo": "freelance",
     "descripcion": "Estamos buscando un desarrollador backend con experiencia en Node.js, Express y bases de datos NoSQL. Se requiere conocimiento en arquitectura de microservicios.",
     "data": {
       "technology": "node",
       "modalidad": "bogota",
-      "nivel": "mid"
+      "nivel": "mid",
+      "contrato": "freelance"
     }
   },
   {
@@ -124,11 +137,13 @@
     "titulo": "Ingeniero de Machine Learning",
     "empresa": "AI Labs",
     "ubicacion": "Remoto",
+    "tipo":"full-time",
     "descripcion": "Buscamos un ingeniero de machine learning con experiencia en modelos de predicción y procesamiento de datos. Se valorará conocimiento en TensorFlow, PyTorch y MLOps.",
     "data": {
       "technology": "python",
       "modalidad": "remoto",
-      "nivel": "senior"
+      "nivel": "senior",
+      "contrato":"full-time"
     }
   },
   {
@@ -136,11 +151,13 @@
     "titulo": "QA Automation Engineer",
     "empresa": "Quality First",
     "ubicacion": "Lima",
+    "tipo":"freelance",
     "descripcion": "Se busca ingeniero de QA con experiencia en automatización de pruebas utilizando herramientas como Selenium, Cypress o Playwright. Conocimiento deseado en CI/CD.",
     "data": {
       "technology": "mobile",
       "modalidad": "lima",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato":"freelance"
     }
   },
   {
@@ -148,11 +165,13 @@
     "titulo": "Administrador de Sistemas",
     "empresa": "InfraTech Global",
     "ubicacion": "Santiago de Chile",
+    "tipo":"full-time",
     "descripcion": "Buscamos un administrador de sistemas con experiencia en Linux, Docker y monitoreo de servidores. Conocimiento en scripting Bash o Python será un plus.",
     "data": {
       "technology": "mobile",
       "modalidad": "santiago",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato":"full-time"
     }
   },
   {
@@ -160,11 +179,13 @@
     "titulo": "Scrum Master",
     "empresa": "Agile Minds",
     "ubicacion": "Madrid",
+    "tipo":"internship",
     "descripcion": "Estamos buscando un Scrum Master con experiencia en metodologías ágiles y gestión de equipos multidisciplinarios. Certificación Scrum Master deseable.",
     "data": {
       "technology": "mobile",
       "modalidad": "madrid",
-      "nivel": "mid-level"
+      "nivel": "mid-level",
+      "contrato":"internship"
     }
   },
   {
@@ -172,11 +193,13 @@
     "titulo": "Soporte Técnico Nivel 2",
     "empresa": "HelpDesk Pro",
     "ubicacion": "Monterrey",
+    "tipo":"freelance",
     "descripcion": "Buscamos un técnico de soporte con habilidades en resolución de incidencias, redes y sistemas operativos. Se requiere atención al detalle y excelente trato con el usuario.",
     "data": {
       "technology": "mobile",
       "modalidad": "monterrey",
-      "nivel": "junior"
+      "nivel": "junior",
+      "contrato":"freelance"
     }
   }
 ]

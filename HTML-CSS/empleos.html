@@ -30,7 +30,11 @@
             </nav>
             <div>
                 <a class="btn-cv" href="">Subir CV</a>
-                <devjobs-avatar></devjobs-avatar>
+                <devjobs-avatar 
+                    service="github" 
+                    username="jaby1202"
+                    size="40">
+                </devjobs-avatar>
             </div>
         </header>
         <main>
@@ -53,6 +57,7 @@
                     <div class="search-filters">
                         <select name="tecnología" id="filtro-tecnologia">
                             <option value=" ">Tecnología</option>
+                            <optgroup value="">
                                 <option value="javascript">JavaScript</option>
                                 <option value="python">Python</option>
                                 <option value="java">Java</option>
@@ -68,11 +73,11 @@
                             <optgroup value="">
                                 <option value="remoto">Remoto</option>
                                 <option value="onsite">On-site</option>
-                                <option value="híbrido">Híbrido</option>
+                                <option value="hibrido">Híbrido</option>
                                 <option value="colombia">Colombia</option>                                
                             </optgroup>
                         </select>
-                        <select name="tipo-de-contrato" id="filtro-tipo-de-contrato">
+                        <select name="tipo" id="filtro-tipo-de-contrato">
                             <optgroup value=" ">
                                 <option value="">Tipo de contrato</option>
                                 <option value="full-time">Full-time</option>
@@ -81,7 +86,7 @@
                                 <option value="internship">Internship</option>
                             </optgroup>
                         </select>
-                        <select name="nivel-de-experiencia" id="filtro-nivel-de-experiencia">
+                        <select name="experiencia" id="filtro-nivel-de-experiencia">
                             <optgroup value=" ">
                                 <option value="">Nivel de experiencia</option>
                                 <option value="junior">Junior</option>

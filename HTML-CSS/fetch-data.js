@@ -1,5 +1,5 @@
 const conteiner = document.querySelector('.jobs-listings')
-fetch ('/data.json')
+fetch ('./data.json')
     .then((response) => {
         return response.json()
     })
@@ -8,13 +8,15 @@ fetch ('/data.json')
             const article = document.createElement('article')
             article.className = 'job-listing-card'
 
-            article.dataset.ubicacion = job.data.ubicacion
+            article.dataset.modalidad = job.data.modalidad
             article.dataset.technology = job.data.technology
             article.dataset.nivel = job.data.nivel
+            article.dataset.contrato = job.data.contrato
+            
             article.innerHTML = `
                 <div>
                     <h4>${job.titulo}</h4>
-                    <small>${job.empresa} | ${job.ubicacion}</small>
+                    <small>${job.empresa} | ${job.ubicacion} | ${job.tipo}</small>
                     <p> ${job.descripcion}</p>
                 </div>
                 <button  class="button-apply-job">Aplicar</button>
