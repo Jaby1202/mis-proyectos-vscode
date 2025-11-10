@@ -8,7 +8,7 @@
     "tipo":"Freelance",
     "cargo":"Senior",
     "data": {
-      "technology": "react",
+      "technology": ["react", "javascript", "node.js"],
       "modalidad": "remoto",
       "nivel": "senior",
       "contrato": "freelance"
@@ -23,7 +23,7 @@
     "tipo":"Internship",
     "cargo":"Junior",
     "data": {
-      "technology": "python",
+      "technology": ["python", "sql", "r"],
       "modalidad": "cdmx",
       "nivel": "junior",
       "contrato": "internship"
@@ -38,7 +38,7 @@
     "tipo":"Part-time",
     "cargo":"Mid-level",
     "data": {
-      "technology": "mobile",
+      "technology": ["mobile", "swift", "kotlin"],
       "modalidad": "medellin",
       "nivel": "mid-level",
       "contrato": "part-time"
@@ -54,7 +54,7 @@
     "descripcion": "Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.",
     "cargo":"Lead",
     "data": {
-      "technology": "mobile",
+      "technology": ["AWS", "Azure", "GCP"],
       "modalidad": "remoto",
       "nivel": "lead",
       "contrato": "internship"
@@ -69,7 +69,7 @@
     "descripcion": "Estamos buscando un diseñador UX/UI con pasión por crear experiencias digitales excepcionales. Se requiere experiencia en Figma, diseño centrado en el usuario y colaboración con equipos de desarrollo.",
     "cargo":"Mid-level",
     "data": {
-      "technology": "mobile",
+      "technology": ["figma", "ux", "ui"],
       "modalidad": "barcelona",
       "nivel": "mid-level",
       "contrato": "full-time"
@@ -84,7 +84,7 @@
     "descripcion": "Se busca un administrador de bases de datos con experiencia en PostgreSQL y MySQL. El candidato deberá asegurar la disponibilidad, seguridad y rendimiento de las bases de datos de producción.",
     "cargo":"Junior",
     "data": {
-      "technology": "mobile",
+      "technology": ["Postgresql", "mysql"],
       "modalidad": "bsas",
       "nivel": "junior",
       "contrato": "part-time"
@@ -99,7 +99,7 @@
     "descripcion": "Buscamos un especialista en ciberseguridad con conocimientos en protección de infraestructuras, análisis de vulnerabilidades y respuesta ante incidentes. Se valorará experiencia con SIEM y certificaciones de seguridad.",
     "cargo":"Senior",
     "data": {
-      "technology": "mobile",
+      "technology": ["it"],
       "modalidad": "remoto",
       "nivel": "mid-level",
       "contrato": "internship"
@@ -114,7 +114,7 @@
     "descripcion": "Estamos buscando un Product Manager con experiencia en la definición y lanzamiento de productos digitales. Se requiere capacidad analítica, liderazgo y conocimiento en metodologías ágiles.",
     "cargo":"Senior",
     "data": {
-      "technology": "mobile",
+      "technology": ["product"],
       "modalidad": "madrid",
       "nivel": "senior",
       "contrato": "freelance"
@@ -129,7 +129,7 @@
     "descripcion": "Buscamos un desarrollador frontend con experiencia en React, TypeScript y Tailwind CSS. Se valorará conocimiento en optimización de rendimiento y accesibilidad web.",
     "cargo":"Mid-level",
     "data": {
-      "technology": "react",
+      "technology": ["react", "typescript", "tailwindcss"],
       "modalidad": "valencia",
       "nivel": "mid-level",
       "contrato": "internship"
@@ -144,7 +144,7 @@
     "descripcion": "Estamos buscando un desarrollador backend con experiencia en Node.js, Express y bases de datos NoSQL. Se requiere conocimiento en arquitectura de microservicios.",
     "cargo":"Junior",
     "data": {
-      "technology": "node",
+      "technology": ["node.js", "express", "nosql"],
       "modalidad": "bogota",
       "nivel": "junior",
       "contrato": "freelance"
@@ -159,7 +159,7 @@
     "descripcion": "Buscamos un ingeniero de machine learning con experiencia en modelos de predicción y procesamiento de datos. Se valorará conocimiento en TensorFlow, PyTorch y MLOps.",
     "cargo":"Senior",
     "data": {
-      "technology": "python",
+      "technology": ["python"],
       "modalidad": "remoto",
       "nivel": "senior",
       "contrato":"full-time"
@@ -174,7 +174,7 @@
     "descripcion": "Se busca ingeniero de QA con experiencia en automatización de pruebas utilizando herramientas como Selenium, Cypress o Playwright. Conocimiento deseado en CI/CD.",
     "cargo":"Mid-level",
     "data": {
-      "technology": "mobile",
+      "technology": ["selenium", "cypress", "playwright"],
       "modalidad": "lima",
       "nivel": "mid-level",
       "contrato":"freelance"
@@ -189,7 +189,7 @@
     "descripcion": "Buscamos un administrador de sistemas con experiencia en Linux, Docker y monitoreo de servidores. Conocimiento en scripting Bash o Python será un plus.",
     "cargo":"Junior",
     "data": {
-      "technology": "mobile",
+      "technology": ["linux", "doker"],
       "modalidad": "santiago",
       "nivel": "junior",
       "contrato":"full-time"
@@ -204,7 +204,7 @@
     "descripcion": "Estamos buscando un Scrum Master con experiencia en metodologías ágiles y gestión de equipos multidisciplinarios. Certificación Scrum Master deseable.",
     "cargo":"Lead",
     "data": {
-      "technology": "mobile",
+      "technology": ["scrum"],
       "modalidad": "madrid",
       "nivel": "lead",
       "contrato":"internship"
@@ -219,7 +219,7 @@
     "descripcion": "Buscamos un técnico de soporte con habilidades en resolución de incidencias, redes y sistemas operativos. Se requiere atención al detalle y excelente trato con el usuario.",
     "cargo":"Junior",
     "data": {
-      "technology": "mobile",
+      "technology": ["it"],
       "modalidad": "monterrey",
       "nivel": "junior",
       "contrato":"part-time"
