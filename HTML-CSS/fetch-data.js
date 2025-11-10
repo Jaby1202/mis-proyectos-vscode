@@ -8,6 +8,8 @@ fetch ('./data.json')
             const article = document.createElement('article')
             article.className = 'job-listing-card'
 
+            article.dataset.titulo = job.titulo
+
             article.dataset.modalidad = job.data.modalidad
             article.dataset.technology = job.data.technology
             article.dataset.nivel = job.data.nivel
@@ -15,7 +17,7 @@ fetch ('./data.json')
             
             article.innerHTML = `
                 <div>
-                    <h4>${job.titulo}</h4>
+                    <h4>${job.titulo} ${job.cargo}</h4>
                     <small>${job.empresa} | ${job.ubicacion} | ${job.tipo}</small>
                     <p> ${job.descripcion}</p>
                 </div>

@@ -1,23 +1,27 @@
 [
   {
     "id": "7a4d1d8b-1e45-4d8c-9f1a-8c2f9a9121a4",
-    "titulo": "Desarrollador de Software Senior",
+    "titulo": "Desarrollador de Software",
     "empresa": "Tech Solutions Inc.",
-    "ubicacion": "Remoto",
     "descripcion": "Buscamos un ingeniero de software con experiencia en desarrollo web y conocimientos en JavaScript, React y Node.js. El candidato ideal debe ser capaz de trabajar en equipo y tener buenas habilidades de comunicación.",
+    "ubicacion": "Remoto",
+    "tipo":"Freelance",
+    "cargo":"Senior",
     "data": {
       "technology": "react",
       "modalidad": "remoto",
       "nivel": "senior",
-      "contrato": "full-time"
+      "contrato": "freelance"
     }
   },
   {
     "id": "d35b2c89-5d60-4f26-b19a-6cfb2f1a0f57",
     "titulo": "Analista de Datos",
     "empresa": "Data Driven Co.",
-    "ubicacion": "Ciudad de México",
     "descripcion": "Estamos buscando un analista de datos con experiencia en el manejo de grandes conjuntos de datos y herramientas de visualización. Se requiere conocimiento en SQL, Python y R.",
+    "ubicacion": "Ciudad de México",
+    "tipo":"Internship",
+    "cargo":"Junior",
     "data": {
       "technology": "python",
       "modalidad": "cdmx",
@@ -29,13 +33,15 @@
     "id": "e31f9a92-61d7-4b7a-b3a2-91e8c1f40b2d",
     "titulo": "Desarrollador de Aplicaciones Móviles",
     "empresa": "Mobile Apps Ltd.",
-    "ubicacion": "Guadalajara",
     "descripcion": "Buscamos un desarrollador de aplicaciones móviles con experiencia en iOS y/o Android. El candidato debe tener conocimientos en Swift, Kotlin y el desarrollo de interfaces de usuario.",
+    "ubicacion": "Medellin",
+    "tipo":"Part-time",
+    "cargo":"Mid-level",
     "data": {
       "technology": "mobile",
-      "modalidad": "guadalajara",
+      "modalidad": "medellin",
       "nivel": "mid-level",
-      "contrato": "full-time"
+      "contrato": "part-time"
 
     }
   },
@@ -44,12 +50,14 @@
     "titulo": "Ingeniero de DevOps",
     "empresa": "Cloud Services SA",
     "ubicacion": "Remoto",
+    "tipo":"Internship",
     "descripcion": "Estamos buscando un ingeniero de DevOps con experiencia en la gestión de infraestructuras en la nube, automatización de procesos y herramientas de integración continua. Se requiere conocimiento en AWS, Azure o GCP.",
+    "cargo":"Lead",
     "data": {
       "technology": "mobile",
       "modalidad": "remoto",
-      "nivel": "mid-level",
-      "contrato": "part-time"
+      "nivel": "lead",
+      "contrato": "internship"
     }
   },
   {
@@ -57,12 +65,14 @@
     "titulo": "Diseñador UX/UI",
     "empresa": "Creative Minds Studio",
     "ubicacion": "Barcelona",
+    "tipo":"Full-time",
     "descripcion": "Estamos buscando un diseñador UX/UI con pasión por crear experiencias digitales excepcionales. Se requiere experiencia en Figma, diseño centrado en el usuario y colaboración con equipos de desarrollo.",
+    "cargo":"Mid-level",
     "data": {
       "technology": "mobile",
       "modalidad": "barcelona",
       "nivel": "mid-level",
-      "contrato": "freelance"
+      "contrato": "full-time"
     }
   },
   {
@@ -70,12 +80,14 @@
     "titulo": "Administrador de Bases de Datos",
     "empresa": "Secure Data Corp.",
     "ubicacion": "Buenos Aires",
+    "tipo":"Part-time",
     "descripcion": "Se busca un administrador de bases de datos con experiencia en PostgreSQL y MySQL. El candidato deberá asegurar la disponibilidad, seguridad y rendimiento de las bases de datos de producción.",
+    "cargo":"Junior",
     "data": {
       "technology": "mobile",
       "modalidad": "bsas",
-      "nivel": "mid-level",
-      "contrato": "full-time"
+      "nivel": "junior",
+      "contrato": "part-time"
     }
   },
   {
@@ -83,7 +95,9 @@
     "titulo": "Especialista en Ciberseguridad",
     "empresa": "SafeNet Solutions",
     "ubicacion": "Remoto",
+    "tipo":"Internship",
     "descripcion": "Buscamos un especialista en ciberseguridad con conocimientos en protección de infraestructuras, análisis de vulnerabilidades y respuesta ante incidentes. Se valorará experiencia con SIEM y certificaciones de seguridad.",
+    "cargo":"Senior",
     "data": {
       "technology": "mobile",
       "modalidad": "remoto",
@@ -96,12 +110,14 @@
     "titulo": "Product Manager",
     "empresa": "NextGen Technologies",
     "ubicacion": "Madrid",
+    "tipo":"Freelance",
     "descripcion": "Estamos buscando un Product Manager con experiencia en la definición y lanzamiento de productos digitales. Se requiere capacidad analítica, liderazgo y conocimiento en metodologías ágiles.",
+    "cargo":"Senior",
     "data": {
       "technology": "mobile",
       "modalidad": "madrid",
       "nivel": "senior",
-      "contrato": "part-time"
+      "contrato": "freelance"
     }
   },
   {
@@ -109,8 +125,9 @@
     "titulo": "Frontend Developer",
     "empresa": "Bright Web Studio",
     "ubicacion": "Valencia",
-    "tipo": "internship",
+    "tipo": "Internship",
     "descripcion": "Buscamos un desarrollador frontend con experiencia en React, TypeScript y Tailwind CSS. Se valorará conocimiento en optimización de rendimiento y accesibilidad web.",
+    "cargo":"Mid-level",
     "data": {
       "technology": "react",
       "modalidad": "valencia",
@@ -123,12 +140,13 @@
     "titulo": "Backend Developer",
     "empresa": "APIWorks",
     "ubicacion": "Bogotá",
-    "tipo": "freelance",
+    "tipo": "Freelance",
     "descripcion": "Estamos buscando un desarrollador backend con experiencia en Node.js, Express y bases de datos NoSQL. Se requiere conocimiento en arquitectura de microservicios.",
+    "cargo":"Junior",
     "data": {
       "technology": "node",
       "modalidad": "bogota",
-      "nivel": "mid",
+      "nivel": "junior",
       "contrato": "freelance"
     }
   },
@@ -137,8 +155,9 @@
     "titulo": "Ingeniero de Machine Learning",
     "empresa": "AI Labs",
     "ubicacion": "Remoto",
-    "tipo":"full-time",
+    "tipo":"Full-time",
     "descripcion": "Buscamos un ingeniero de machine learning con experiencia en modelos de predicción y procesamiento de datos. Se valorará conocimiento en TensorFlow, PyTorch y MLOps.",
+    "cargo":"Senior",
     "data": {
       "technology": "python",
       "modalidad": "remoto",
@@ -151,8 +170,9 @@
     "titulo": "QA Automation Engineer",
     "empresa": "Quality First",
     "ubicacion": "Lima",
-    "tipo":"freelance",
+    "tipo":"Freelance",
     "descripcion": "Se busca ingeniero de QA con experiencia en automatización de pruebas utilizando herramientas como Selenium, Cypress o Playwright. Conocimiento deseado en CI/CD.",
+    "cargo":"Mid-level",
     "data": {
       "technology": "mobile",
       "modalidad": "lima",
@@ -165,12 +185,13 @@
     "titulo": "Administrador de Sistemas",
     "empresa": "InfraTech Global",
     "ubicacion": "Santiago de Chile",
-    "tipo":"full-time",
+    "tipo":"Full-time",
     "descripcion": "Buscamos un administrador de sistemas con experiencia en Linux, Docker y monitoreo de servidores. Conocimiento en scripting Bash o Python será un plus.",
+    "cargo":"Junior",
     "data": {
       "technology": "mobile",
       "modalidad": "santiago",
-      "nivel": "mid-level",
+      "nivel": "junior",
       "contrato":"full-time"
     }
   },
@@ -179,12 +200,13 @@
     "titulo": "Scrum Master",
     "empresa": "Agile Minds",
     "ubicacion": "Madrid",
-    "tipo":"internship",
+    "tipo":"Internship",
     "descripcion": "Estamos buscando un Scrum Master con experiencia en metodologías ágiles y gestión de equipos multidisciplinarios. Certificación Scrum Master deseable.",
+    "cargo":"Lead",
     "data": {
       "technology": "mobile",
       "modalidad": "madrid",
-      "nivel": "mid-level",
+      "nivel": "lead",
       "contrato":"internship"
     }
   },
@@ -193,13 +215,14 @@
     "titulo": "Soporte Técnico Nivel 2",
     "empresa": "HelpDesk Pro",
     "ubicacion": "Monterrey",
-    "tipo":"freelance",
+    "tipo":"Part-time",
     "descripcion": "Buscamos un técnico de soporte con habilidades en resolución de incidencias, redes y sistemas operativos. Se requiere atención al detalle y excelente trato con el usuario.",
+    "cargo":"Junior",
     "data": {
       "technology": "mobile",
       "modalidad": "monterrey",
       "nivel": "junior",
-      "contrato":"freelance"
+      "contrato":"part-time"
     }
   }
 ]

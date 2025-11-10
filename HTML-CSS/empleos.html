@@ -52,11 +52,11 @@
                             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
                         </span>
                     
-                        <input  required type="text" placeholder="Buscar trabajos, empresas o habilidades">
+                        <input  id="buscador" type="text" placeholder="Buscar trabajos, empresas o habilidades">
                     </div>
                     <div class="search-filters">
                         <select name="tecnología" id="filtro-tecnologia">
-                            <option value=" ">Tecnología</option>
+                            <option value="">Tecnología</option>
                             <optgroup value="">
                                 <option value="javascript">JavaScript</option>
                                 <option value="python">Python</option>
@@ -69,16 +69,23 @@
                             </optgroup>
                         </select>
                         <select name="ubicacion" id="filtro-ubicacion">
-                            <option value=" ">Ubicación</option>
+                            <option value="">Ubicación</option>
                             <optgroup value="">
                                 <option value="remoto">Remoto</option>
-                                <option value="onsite">On-site</option>
-                                <option value="hibrido">Híbrido</option>
-                                <option value="colombia">Colombia</option>                                
+                                <option value="cdmx">Ciudad de mexico</option>
+                                <option value="medellin">Medellin</option>
+                                <option value="bogota">Bogotá</option>  
+                                <option value="barcelona">Barcelona</option> 
+                                <option value="bsas">Buenos Aires</option>  
+                                <option value="madrid">Madrid</option> 
+                                <option value="valencia">Valencia</option>  
+                                <option value="santiago">Santiago de chile</option> 
+                                <option value="lima">Lima</option>  
+                                <option value="monterrey">Monterrey</option>                           
                             </optgroup>
                         </select>
                         <select name="tipo" id="filtro-tipo-de-contrato">
-                            <optgroup value=" ">
+                            <optgroup value="">
                                 <option value="">Tipo de contrato</option>
                                 <option value="full-time">Full-time</option>
                                 <option value="part-time">Part-time</option>
@@ -87,7 +94,7 @@
                             </optgroup>
                         </select>
                         <select name="experiencia" id="filtro-nivel-de-experiencia">
-                            <optgroup value=" ">
+                            <optgroup value="">
                                 <option value="">Nivel de experiencia</option>
                                 <option value="junior">Junior</option>
                                 <option value="mid-level">Mid-level</option>
