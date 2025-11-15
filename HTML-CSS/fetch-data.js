@@ -15,6 +15,10 @@ fetch ('./data.json')
             article.dataset.nivel = job.data.nivel
             article.dataset.contrato = job.data.contrato
             
+            article.dataset.technology = Array.isArray(job.data.technology)
+                ? job.data.technology.join(',')
+                : job.data.technology
+
             article.innerHTML = `
                 <div>
                     <h4>${job.titulo} ${job.cargo}</h4>
