@@ -1,33 +1,144 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+                <header>
+            <a href="/" className="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 width="10" height="10" 
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" 
+                 className="icon icon-tabler icons-tabler-outline icon-tabler-brackets-angle">
+                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                 <path d="M8 4l-5 8l5 8" />
+                 <path d="M16 4l5 8l-5 8" />
+            </svg>
+            <h1>DevJobs</h1>
+            </a>
+            <nav>
+                <a href="">Inico</a>
+                <a href="">Empleos</a>
+                <a href="">Empresas</a>
+                <a href="">Salarios</a>
+            </nav>
+            <div>
+                <a className="btn-cv" href="">Subir CV</a>
+                <devjobs-avatar 
+                    service="github" 
+                    username="jaby1202"
+                    size="40">
+                </devjobs-avatar>
+            </div>
+        </header>
+        <main>
+            <section className="jobs-search">
+                <h2>Encuentra tu próximo trabajo</h2>
+                <p>Explora miles de oportunidades en el sector tecnológico.</p>
+                
+                <form role="search">
+                    <div className="search-bar">
+                        <span>
+                            <svg  xmlns="http://www.w3.org/2000/svg"  
+                            width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  
+                            stroke="currentColor"  strokeWidth="1.5"  strokeLinecap="round"  strokeLinejoin="round" 
+                            className="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+                        </span>
+                    
+                        <input  id="buscador" type="text" placeholder="Buscar trabajos"/>
+                    </div>
+                    <div className="search-filters">
+                        <select name="tecnología" id="filtro-tecnologia">
+                            <option value="">Tecnología</option>
+                            <optgroup value="">
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="react">React</option>
+                                <option value="sql">Sql</option>
+                                <option value="nosql">NoSql</option>
+                                <option value="linux">Linux</option>
+                                <option value="node.js">Node js</option>
+                                <option value="express">Express</option>
+                                <option value="typescript">TypeScript</option>
+                                <option value="tailwindcss">Tailwindcss</option>
+                                <option value="selenium">Selenium</option>
+                                <option value="cypress">Cypress</option>
+                                <option value="playwright">Playwright</option>
+                                <option value="doker">Doker</option>
+                                <option value="scrum">Scrum</option>it
+                                <option value="it">IT</option>
+
+                            </optgroup>
+                        </select>
+                        <select name="ubicacion" id="filtro-ubicacion">
+                            <option value="">Ubicación</option>
+                            <optgroup value="">
+                                <option value="remoto">Remoto</option>
+                                <option value="cdmx">Ciudad de méxico</option>
+                                <option value="medellin">Medellin</option>
+                                <option value="bogota">Bogotá</option>  
+                                <option value="barcelona">Barcelona</option> 
+                                <option value="bsas">Buenos Aires</option>  
+                                <option value="madrid">Madrid</option> 
+                                <option value="valencia">Valencia</option>  
+                                <option value="santiago">Santiago de chile</option> 
+                                <option value="lima">Lima</option>  
+                                <option value="monterrey">Monterrey</option>                           
+                            </optgroup>
+                        </select>
+                        <select name="tipo" id="filtro-tipo-de-contrato">
+                            <optgroup value="">
+                                <option value="">Tipo de contrato</option>
+                                <option value="full-time">Full-time</option>
+                                <option value="part-time">Part-time</option>
+                                <option value="freelance">Freelance</option>
+                                <option value="internship">Internship</option>
+                            </optgroup>
+                        </select>
+                        <select name="experiencia" id="filtro-nivel-de-experiencia">
+                            <optgroup value="">
+                                <option value="">Nivel de experiencia</option>
+                                <option value="junior">Junior</option>
+                                <option value="mid-level">Mid-level</option>
+                                <option value="senior">Senior</option>
+                                <option value="lead">Lead</option>  
+                            </optgroup> 
+                        </select>
+                    </div>
+                      
+                </form>
+
+            </section>
+            <section>
+                <h2>Resultados de búsqueda</h2>
+                <div className="jobs-listings">      
+    
+                </div>
+
+                <nav className="pagination">
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" 
+                        stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 
+                        className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+                    </a>
+                    <a className="is-active" href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">4</a>
+                    <a href="">5</a>
+                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" 
+                        width="24" height="24" viewBox="0 0 24 24" fill="none" 
+                        stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 
+                        className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    </a>
+                </nav>
+                
+            </section>
+        </main>
+        <footer>
+            <small>&copy; 2025 DevJobs. Todos los derechos reservados</small>
+        </footer>
     </>
   )
 }
