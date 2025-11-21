@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import JobCard from './components/JobCard'
 function App() {
   return (
     <>
@@ -111,7 +113,15 @@ function App() {
             <section>
                 <h2>Resultados de búsqueda</h2>
                 <div className="jobs-listings">      
-    
+                  <JobCard
+                        job={{
+                          titulo : "Desarrollador/a Frontend React.js",
+                          ubicacion: "Remoto",
+                          empresa : "Tech Solutions",
+                          descripcion : "Unete a nuestro equipo como desarrollador/a frontend especializado trabaja en proyectos innovadores y colabora con un equipo dinamico.",
+                          data : ['React', 'TypeScript', 'CSS']
+                        }}
+                  />
                 </div>
 
                 <nav className="pagination">
