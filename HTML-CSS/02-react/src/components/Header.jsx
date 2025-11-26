@@ -1,4 +1,4 @@
-function Header({ head }){
+function Header(){
     
     return (
         <header>
@@ -13,21 +13,22 @@ function Header({ head }){
                     <path d="M16 4l5 8l-5 8" />
                 </svg>
                 <h1>DevJobs</h1>
-        </a>
-        <nav>
+            </a>
+            <nav>
                 <a href="">Inico</a>
                 <a href="">Empleos</a>
                 <a href="">Empresas</a>
                 <a href="">Salarios</a>
-        </nav>
-        <div>
+            </nav>
+            <div>
                 <a className="btn-cv" href="">Subir CV</a>
                 <devjobs-avatar 
                     service="github" 
                     username="jaby1202"
-                    size="40">
+                    size="40"
+                >
                 </devjobs-avatar>
-        </div>
+            </div>
         </header>
         
 
