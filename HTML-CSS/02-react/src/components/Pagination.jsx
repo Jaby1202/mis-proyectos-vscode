@@ -1,4 +1,4 @@
-function Pagination ({currentPage = 1 , totalPages = 10}){
+function Pagination ({currentPage = 1 , totalPages = 10, onPageChange}){
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
 
     const isFirstPage = currentPage === 1
@@ -6,9 +6,23 @@ function Pagination ({currentPage = 1 , totalPages = 10}){
 
     const stylePrevButton = isFirstPage ? { pointerEvents: 'none', opacity: 0.5 } : {}
     const styleNextButton = isLastPage ? { pointerEvents: 'none', opacity: 0.5 } : {}
+
+    const handlePrevClick = (event) =>{
+        event.preventDefault()
+        if (!isFirstPage){
+            onPageChange(currentPage - 1)
+        }
+    }
+    const handleNextClick = (event) =>{
+        event.preventDefault()
+        if (!isLastPage){
+            onPageChange(currentPage + 1)
+        }
+    }
+    const handleChangePage = (AS) 
     return(
         <nav className="pagination">
-                    <a href="" style={stylePrevButton}>
+                    <a href="" style={stylePrevButton} onClick={handlePrevClick}>
                         <svg xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" viewBox="0 0 24 24" fill="none" 
                         stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 
@@ -25,7 +39,7 @@ function Pagination ({currentPage = 1 , totalPages = 10}){
                     )
 
                     )}
-                    <a href="" style={styleNextButton}>
+                    <a href="" style={styleNextButton} onClick={handleNextClick}>
                         <svg xmlns="http://www.w3.org/2000/svg" 
                         width="24" height="24" viewBox="0 0 24 24" fill="none" 
                         stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 

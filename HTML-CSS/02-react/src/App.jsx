@@ -5,6 +5,7 @@ import SearchFormSection from './components/SearchFormSection'
 import Pagination  from './components/Pagination'
 import JobListings from './components/JobListings'
 function App() {
+  const handlePageChange = page
   return (
     <>
         <Header />
@@ -24,7 +25,7 @@ function App() {
                   />
 
 
-                <Pagination/>
+                <Pagination onPageChange ={handlePageChange}/>
                 
             </section>
         </main>
