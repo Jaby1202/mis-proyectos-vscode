@@ -24,7 +24,7 @@ function App() {
                   />
 
 
-                <Pagination currentPage={5} totalPages={8} />
+                <Pagination/>
                 
             </section>
         </main>

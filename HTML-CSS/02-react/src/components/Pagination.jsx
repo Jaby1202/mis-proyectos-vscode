@@ -1,8 +1,15 @@
-function Pagination ({currentPage, totalPages}){
+function Pagination ({currentPage = 1 , totalPages = 10}){
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1)
+
+    const isFirstPage = currentPage === 1
+    const isLastPage = currentPage === totalPages
+
+    const stylePrevButton = isFirstPage ? { pointerEvents: 'none', opacity: 0.5 } : {}
+    const styleNextButton = isLastPage ? { pointerEvents: 'none', opacity: 0.5 } : {}
     return(
         <nav className="pagination">
-                    <a href=""><svg xmlns="http://www.w3.org/2000/svg"
+                    <a href="" style={stylePrevButton}>
+                        <svg xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" viewBox="0 0 24 24" fill="none" 
                         stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 
                         className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
@@ -18,7 +25,8 @@ function Pagination ({currentPage, totalPages}){
                     )
 
                     )}
-                    <a href=""><svg xmlns="http://www.w3.org/2000/svg" 
+                    <a href="" style={styleNextButton}>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
                         width="24" height="24" viewBox="0 0 24 24" fill="none" 
                         stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" 
                         className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
