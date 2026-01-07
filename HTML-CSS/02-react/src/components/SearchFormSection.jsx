@@ -1,12 +1,56 @@
+import { useId, useState } from "react"
 
-function SearchFormSection (){
+const useSearchForm  = ({idText, idTechnology, idModalidad, idNivel, idType, onSearch, onTextFilter}) =>{
+    const [searchText, setSearchText] = useState("")
+    const handleChange = (event) =>{
+        
+        const formData = new FormData(event.currentTarget)
 
+        const filters = {
+            serch: formData.get(idText),
+            technology: formData.get(idTechnology),
+            modalidad: formData.get(idModalidad),
+            nivel: formData.get(idNivel),
+            type: formData.get(idType)
+            
+        }
+           
+        onSearch(filters)
+    }
+
+    const handleTextChange = (event) => {
+        const text = event.target.value
+        setSearchText(text)
+        onTextFilter(text)
+    }
+
+    return{
+        searchText,
+        handleChange,
+        handleTextChange
+    }
+}
+
+
+function SearchFormSection ( {onSearch, onTextFilter }){
+    const idText = useId()
+    const idTechnology = useId()
+    const idModalidad = useId()
+    const idNivel = useId()
+    const idType = useId()
+
+    const {
+        searchText,
+        handleChange,
+        handleTextChange
+    } = useSearchForm ({idTechnology, idModalidad, idNivel, idType, onSearch, onTextFilter})
+   
     return (
         <section className="jobs-search">
                 <h2>Encuentra tu próximo trabajo</h2>
                 <p>Explora miles de oportunidades en el sector tecnológico.</p>
                 
-                <form role="search">
+                <form onChange={handleChange} role="search">
                     <div className="search-bar">
                         <span>
                             <svg  xmlns="http://www.w3.org/2000/svg"  
@@ -16,10 +60,13 @@ function SearchFormSection (){
                             <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
                         </span>
                     
-                        <input  id="buscador" type="text" placeholder="Buscar trabajos"/>
+                        <input 
+                         name={idText} id="buscador" type="text" placeholder="Buscar trabajos"
+                         onChange={handleTextChange}
+                        />
                     </div>
                     <div className="search-filters">
-                        <select name="tecnología" id="filtro-tecnologia">
+                        <select name={idTechnology} id="filtro-tecnologia">
                             <option value="">Tecnología</option>
                             <optgroup value="">
                                 <option value="javascript">JavaScript</option>
@@ -41,7 +88,7 @@ function SearchFormSection (){
 
                             </optgroup>
                         </select>
-                        <select name="ubicacion" id="filtro-ubicacion">
+                        <select name={idModalidad} id="filtro-ubicacion">
                             <option value="">Ubicación</option>
                             <optgroup value="">
                                 <option value="remoto">Remoto</option>
@@ -57,7 +104,7 @@ function SearchFormSection (){
                                 <option value="monterrey">Monterrey</option>                           
                             </optgroup>
                         </select>
-                        <select name="tipo" id="filtro-tipo-de-contrato">
+                        <select name={idType} id="filtro-tipo-de-contrato">
                             <optgroup value="">
                                 <option value="">Tipo de contrato</option>
                                 <option value="full-time">Full-time</option>
@@ -66,7 +113,7 @@ function SearchFormSection (){
                                 <option value="internship">Internship</option>
                             </optgroup>
                         </select>
-                        <select name="experiencia" id="filtro-nivel-de-experiencia">
+                        <select name={idNivel} id="filtro-nivel-de-experiencia">
                             <optgroup value="">
                                 <option value="">Nivel de experiencia</option>
                                 <option value="junior">Junior</option>

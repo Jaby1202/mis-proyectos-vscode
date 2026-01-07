@@ -1,8 +1,10 @@
+import { Link } from "./Link"
+
 function Header(){
     
     return (
         <header>
-            <a href="/" className="logo">
+            <Link href="/" className="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" 
                     width="10" height="10" 
                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -13,10 +15,10 @@ function Header(){
                     <path d="M16 4l5 8l-5 8" />
                 </svg>
                 <h1>DevJobs</h1>
-            </a>
+            </Link>
             <nav>
                 <a href="">Inico</a>
-                <a href="">Empleos</a>
+                <Link href="/search">Empleos</Link>
                 <a href="">Empresas</a>
                 <a href="">Salarios</a>
             </nav>

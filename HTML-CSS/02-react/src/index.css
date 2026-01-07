@@ -199,6 +199,11 @@ main > section:nth-child(1) {
   align-items: center;  /* Centrar horizontalmente */
   padding: 4rem 2rem; /* Espaciado interno */
 
+  button {
+    left: 4px;
+
+  }
+
   h1 {
     padding-top: 0; /* Espacio superior */
     font-size: 3rem; /* Tamaño de fuente grande */
@@ -219,6 +224,7 @@ main > section:nth-child(1) {
     mask-image: linear-gradient(to bottom, rgba(16, 25, 34, 1) 5%, rgba(16, 25, 34, 0) 80%); 
     /* Degradado de máscara para efecto */
   }
+  
 }
 
 /* Formulario de Búsqueda */
